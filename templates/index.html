@@ -1,0 +1,53 @@
+<html>
+<head>
+<style>
+
+    body {
+        text-align: center;
+        margin-top: 50px;
+        font-size: 25px;
+        background-color: darkslategrey;
+    }
+
+    h1 {
+        color: skyblue;
+
+    }
+
+    h5{
+        color: black;
+    }
+
+    input[type='submit']{
+        background-color: darkslategrey;
+        color: skyblue;
+        margin: 2px;
+    }
+
+</style>
+</head>
+
+<!--##NO predefine-->
+<body>
+<h1>Advance Calculator</h1>
+<br>
+<img src="{{url_for('static', filename='img.png')}}">
+<br>
+<br>
+<form method="POST">
+    <label>Enter Expression</label>
+    <br>
+    <select class="is-focused is-large" name="operation" aria-label="operationDropdown">
+        <option>Choose Operation</option>
+        <option value="factor">Factor</option>
+        <option value="simplify">Simplify</option>
+    </select>
+    <input placeholder="Expression" name="text">
+    <input type="Submit">
+</form>
+<p>Your equation is {{equation}} = {{ result }}</p>
+<br>
+<br>
+<footer><h5>Created By- Neehar Sheth</h5></footer>
+</body>
+</html>
